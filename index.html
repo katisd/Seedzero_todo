@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SeedZero To-Do List</title>
+    <script src="/script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="main-container">
+      <div class="card">
+        <h1 class="todo-title">TO-DO LIST</h1>
+        <form onsubmit="handleAddTodo(event)" class="todo-form">
+          <input
+            type="text"
+            name="todo"
+            id="todo-input"
+            placeholder="Enter your todo here"
+            spellcheck="true"
+            autocomplete="off"
+          />
+          <button type="submit">Add todo</button>
+        </form>
+        <ul id="todo-list">
+          <li class="todo-list-item">
+            <input type="checkbox" class="todo-checkbox" />
+            <label>This is a todo</label>
+            <button onclick="this.parentElement.remove()">Delete</button>
+          </li>
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>
